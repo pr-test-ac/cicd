@@ -1,0 +1,6 @@
+node(){
+    stage('Initialization'){
+        sh 'echo Dummy Step'
+        sh 'sleep 20'
+    }
+}
