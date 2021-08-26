@@ -10,12 +10,15 @@ node(){
                 sh 'sleep 20'
             }            
         },
-        ubuntu: {
-            sh 'echo hello from ubuntu'
+        master: {
+            sh 'echo hello from master'
             sh 'sleep 30'
         }
     }
     stage('Notify People') {
         sh 'echo hello people'
     }
+    stage('Notification2'){
+	sh 'echo  second notification'
+	}
 }
