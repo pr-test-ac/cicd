@@ -3,4 +3,16 @@ node(){
         sh 'echo Dummy Step'
         sh 'sleep 20'
     }
+    stage('Testing'){
+        parallel LA_Amazon_Linux2: {
+            node('LA_Amazon_Linux2'){
+                sh 'echo Hello from LA_Amazon_Linux2'
+                sh 'sleep 20'
+            }            
+        },
+        ubuntu: {
+            sh 'echo hello from ubuntu'
+            sh 'sleep 30'
+        }
+    }
 }
