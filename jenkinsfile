@@ -21,4 +21,8 @@ node(){
     stage('Notification2'){
 	sh 'echo  second notification'
 	}
+    stage('Notification3'){
+        sh 'echo third notification'
+        }
+
 }
